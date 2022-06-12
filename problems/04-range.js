@@ -10,9 +10,18 @@ range(3, 4); // [3]
 range(7, 6); // []
 ***********************************************************************/
 
-
-// your code here
-
+let result = [];
+function range(start, end) {
+  if (end < start) {
+    return [];
+  }
+  if (start === end) {
+    return result;
+  }
+  result.push(start);
+  start++;
+  return range(start, end);
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

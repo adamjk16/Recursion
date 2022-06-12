@@ -10,8 +10,13 @@ sumArray([0, 1, -3]); //  -2
 sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
-// your code here
-  
+let sumArray = function(arr) {
+if (arr.length === 0) {
+  return 0;
+}
+return arr.shift() + sumArray(arr);
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;

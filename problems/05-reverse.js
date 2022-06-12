@@ -12,7 +12,14 @@ reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
 
-// your code here
+function reverse(string) {
+  let arr = string.split('');
+  if (string.length === 0) {
+    return string;
+  }
+
+  return arr.pop() + reverse(arr.join(''));
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

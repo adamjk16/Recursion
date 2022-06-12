@@ -10,8 +10,19 @@ isSorted([2, 4, 6, 7, 8]); // true
 isSorted([5, 4, 3, 2, 1]); // false
 ***********************************************************************/
 
-// your code here
+function isSorted(array) {
 
+
+  if (array.shift() > array.shift(1)) {
+    return false;
+  } else {
+    return true;
+  }
+
+  return isSorted(array.shift());
+}
+
+1
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = isSorted;

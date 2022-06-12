@@ -22,7 +22,19 @@ sort([]); // []
 ***********************************************************************/
 
 function sort(nums, sorted = []) {
-  // your code here
+  if (nums.length === 0) {
+    return sorted;
+  }
+  let min = nums[0];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < min) {
+      min = nums[i];
+    }
+  }
+  sorted.push(nums[i]);
+  nums delete nums[i];
+
+  return sort(nums, sorted);
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
